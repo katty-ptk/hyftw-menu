@@ -1,0 +1,5 @@
+# daca nu vom avea un design, aici va fi descris #
+# unde sa fie pozitionate anumite elemente #
+# culori, de exemplu:
+    $black: #111
+#fonturi
