@@ -19,6 +19,6 @@ public class Fade : MonoBehaviour
     }
 
     void FadeTransition() {
-        GetComponent<MeshRenderer>().material.DOFade(0.0f, 2f);
+        GetComponent<MeshRenderer>().material.DOFade(0.0f, 3f);
     }
 }
