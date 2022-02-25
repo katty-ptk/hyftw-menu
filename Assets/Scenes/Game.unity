@@ -493,9 +493,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HOPE YOU FIND THE WAY
-
-    pls start working on me:)'
+  m_Text: HOPE YOU FIND THE WAY
 --- !u!222 &1170532189
 CanvasRenderer:
   m_ObjectHideFlags: 0

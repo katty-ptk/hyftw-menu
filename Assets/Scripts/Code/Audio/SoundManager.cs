@@ -26,8 +26,9 @@ public class SoundManager : MonoBehaviour
     {
         if ( !PlayerPrefs.HasKey("musicVolume") ) {
             PlayerPrefs.SetFloat("musicVolume", 1f);  // the default volume is goind to be 50%
-            Load();
         }
+        
+        Load();
     }
 
     public void ChangeVolume() {
@@ -40,9 +41,11 @@ public class SoundManager : MonoBehaviour
 
     private void Load() {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");   // sets the volume to the previously saved one if there is one, otherwise it is going to be 50%
+        effectsSlider.value = PlayerPrefs.GetFloat("effectsVolume");
     }
 
     private void Save() {
         PlayerPrefs.SetFloat("musicVolume", musicSlider.value); // saves the volume to be the newest one chosen
+        PlayerPrefs.SetFloat("effectsVolume", effectsSlider.value);
     }
 }
