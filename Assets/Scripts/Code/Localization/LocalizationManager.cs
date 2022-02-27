@@ -14,6 +14,14 @@ public class LocalizationManager : MonoBehaviour
     [SerializeField] private GameObject ro;
     [SerializeField] private GameObject en;
 
+    private void Start() {
+        if ( LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0] ) {
+            selectLanguage.image.sprite = en_button_image;
+        } else {
+            selectLanguage.image.sprite = ro_button_image;
+        }
+    }
+
     public void ToggleActive() {
         bool isActive = ro.activeSelf;  // if the ro button is inactive, the en button is also
 
