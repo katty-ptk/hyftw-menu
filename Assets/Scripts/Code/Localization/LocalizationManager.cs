@@ -7,6 +7,10 @@ using UnityEngine.Localization.Settings;
 public class LocalizationManager : MonoBehaviour
 {
     [SerializeField] private Button selectLanguage;
+
+    // these will change the language button's image
+    [SerializeField] private Sprite ro_button_image;
+    [SerializeField] private Sprite en_button_image;
     [SerializeField] private GameObject ro;
     [SerializeField] private GameObject en;
 
@@ -20,9 +24,12 @@ public class LocalizationManager : MonoBehaviour
 
     public void changeToRo() {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+        selectLanguage.image.sprite = ro_button_image;
+
     }
 
     public void changeToEn() {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
+        selectLanguage.image.sprite = en_button_image;
     }
 }
